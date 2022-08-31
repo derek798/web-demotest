@@ -13,9 +13,9 @@
 ## 目录结构
 
     common                 ——公共类
-    Page                   ——基类
-    PageElements           ——页面元素类
-    PageObject             ——页面对象类
+    page                   ——Selenium基类，对selenium方法进行深度封装
+    page_elements           ——页面元素yaml文件
+    page_object             ——页面对象类
     TestCase               ——测试用例
     conftest.py            ——pytest胶水文件
     pytest.ini             ——pytest配置文件

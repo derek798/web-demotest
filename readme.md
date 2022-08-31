@@ -1,6 +1,6 @@
 # web-UI 自动化测试示例
 
----
+
 
 ## 框架设计
 
@@ -8,7 +8,7 @@
 - selenium
 - POM页面对象模型（Page Object Model）
 
----
+
 
 ## 目录结构
 
@@ -20,7 +20,7 @@
     conftest.py            ——pytest胶水文件
     pytest.ini             ——pytest配置文件
 
----
+
 
 ## 运行
 

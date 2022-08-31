@@ -14,7 +14,7 @@ def inspect_element():
     for files in os.listdir(cm.ELEMENT_PATH):
         _path = os.path.join(cm.ELEMENT_PATH, files)
         with open(_path, encoding='utf-8') as f:
-            data = yaml.safe_load(f)
+            data = yaml.safe_load(f)  # 返回是个字典
         for k in data.values():
             try:
                 pattern, value = k.split('==')
@@ -23,11 +23,9 @@ def inspect_element():
             if pattern not in cm.LOCATE_MODE:
                 raise Exception('%s中元素【%s】没有指定类型' % (_path, k))
             elif pattern == 'xpath':
-                assert '//' in value,\
-                    '%s中元素【%s】xpath类型与值不配' % (_path, k)
+                assert '//' in value, '%s中元素【%s】xpath类型与值不配' % (_path, k)
             elif pattern == 'css':
-                assert '//' not in value, \
-                    '%s中元素【%s]css类型与值不配' % (_path, k)
+                assert '//' not in value, '%s中元素【%s]css类型与值不配' % (_path, k)
             else:
                 assert value, '%s中元素【%s】类型与值不匹配' % (_path, k)
     else:

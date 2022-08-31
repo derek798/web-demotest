@@ -14,7 +14,7 @@ from utils.logger import log
 
 
 class WebPage(object):
-    """selenium基类"""
+    """对selenium方法进行深度封装"""
 
     def __init__(self, driver):
         # self.driver = webdriver.Chrome()
@@ -46,6 +46,7 @@ class WebPage(object):
 
     def find_elements(self, locator):
         """查找多个相同的元素"""
+        # 把locator当元组传入lambda函数
         return WebPage.element_locator(lambda *args: self.wait.until(
             EC.presence_of_all_elements_located(args)), locator)
 

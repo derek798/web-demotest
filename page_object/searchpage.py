@@ -7,7 +7,10 @@ search = Element('search')
 
 
 class SearchPage(WebPage):
-    """搜索类"""
+    """
+    继承webpage.py中WebPage
+    页面对象类，把webpage中的selenium方法和page_element中的页面元素进行整合
+    """
 
     def input_search(self, content):
         """输入搜索"""
@@ -25,4 +28,11 @@ class SearchPage(WebPage):
 
 
 if __name__ == '__main__':
-    pass
+    from selenium import webdriver
+    driver = webdriver.Chrome()
+    search_page = SearchPage(driver)
+    search_page.get_url("http://www.baidu.com")
+    search_page.input_search("测试搜索")
+    print(search_page.imagine)
+    driver.quit()
+

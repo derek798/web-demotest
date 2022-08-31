@@ -6,6 +6,8 @@ from utils.times import dt_strftime
 
 
 class ConfigManager(object):
+    """设置一些基础配置信息并对其中一些信息做判断，如果没有则创建或报错"""
+
     # 项目目录
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,15 +28,15 @@ class ConfigManager(object):
 
     # 邮件信息
     EMAIL_INFO = {
-        'username': '1084502012@qq.com',  # 切换成你自己的地址
-        'password': 'QQ邮箱授权码',
+        'username': '1337325534@qq.com',  # 切换成你自己的地址
+        'password': 'vgheawbdfneziigh',
         'smtp_host': 'smtp.qq.com',
         'smtp_port': 465
     }
 
     # 收件人
     ADDRESSEE = [
-        '1084502012@qq.com',
+        '2528380985@qq.com',
     ]
 
     @property

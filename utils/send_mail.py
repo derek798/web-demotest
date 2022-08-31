@@ -10,7 +10,7 @@ def send_report():
         content_html = f.read()
     try:
         mail = {
-            'from': '1084502012@qq.com',
+            'from': '1337325534@qq.com',
             'subject': '最新的测试报告邮件',
             'content_html': content_html,
             'attachments': [cm.REPORT_FILE, ]
@@ -23,5 +23,5 @@ def send_report():
 
 
 if __name__ == "__main__":
-    '''请先在config/conf.py文件设置QQ邮箱的账号和密码'''
+    """请先在config/conf.py文件设置QQ邮箱的账号和密码"""
     send_report()

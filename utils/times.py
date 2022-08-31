@@ -20,7 +20,7 @@ def dt_strftime(fmt="%Y%m"):
 
 def sleep(seconds=1.0):
     """
-    睡眠时间
+    睡眠时间，默认1s
     """
     time.sleep(seconds)
 

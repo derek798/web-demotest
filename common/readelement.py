@@ -6,7 +6,7 @@ from config.conf import cm
 
 
 class Element(object):
-    """获取元素"""
+    """读取page_element中的yaml文件，获取元素"""
 
     def __init__(self, name):
         self.file_name = '%s.yaml' % name

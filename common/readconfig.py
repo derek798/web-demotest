@@ -3,11 +3,11 @@
 import configparser
 from config.conf import cm
 
-HOST = 'HOST'
+HOST = 'URL'
 
 
 class ReadConfig(object):
-    """配置文件"""
+    """根据导入的config目录下的conf.py，读取confing.ini配置文件"""
 
     def __init__(self):
         self.config = configparser.RawConfigParser()  # 当有%的符号时请使用Raw读取
@@ -25,7 +25,7 @@ class ReadConfig(object):
 
     @property
     def url(self):
-        return self._get(HOST, HOST)
+        return self._get('HOST', HOST)
 
 
 ini = ReadConfig()
